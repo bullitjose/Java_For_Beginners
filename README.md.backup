@@ -95,4 +95,4 @@ String brand ="Amigoscode";
         System.out.println(brand.substring(0,6));//Amigos
         System.out.println("   a  ".trim);//a
 ```
-**String API Documentation**
+**String API Documentation** look detail of methods
