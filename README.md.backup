@@ -172,7 +172,21 @@ import java.util.Arrays;
         }
 ```
 
->Methods
+> Dont do this with if statements
+
+```
+if(isAdult ==true){
+}
+
+```
+>Switch satement (lesson 60)
+
+
+
+
+
+
+>Methods (lesson 77)
 
 ```
 /*Method construct:
@@ -188,3 +202,4 @@ import java.util.Arrays;
     {
     }
 ```
+

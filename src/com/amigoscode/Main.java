@@ -1,6 +1,7 @@
 package com.amigoscode;
 
 import java.util.Arrays;
+import java.util.concurrent.BrokenBarrierException;
 
 public class Main {
     /*Method construct:
@@ -117,8 +118,22 @@ public class Main {
             System.out.println(" is not an adult :");
         }
 
+        //! on ifs , lesson 58
+        System.out.println(!true);
+        System.out.println(!false);
 
-
+        //Switch statement
+        char grade = 'h';
+        switch (grade){
+            case 'A': System.out.println("Excellent");
+            break;
+            case'B':
+                System.out.println("Pass");
+                break;
+            case 'C':System.out.println("Fail");
+            break;
+            default:
+                System.out.println("Foo");}
 
 
 
