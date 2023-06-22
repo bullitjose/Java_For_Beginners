@@ -1,6 +1,9 @@
 package com.amigoscode;
 
+import java.awt.Color;
+import java.awt.Point;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.concurrent.BrokenBarrierException;
 
 public class Main {
@@ -122,8 +125,8 @@ public class Main {
         System.out.println(!true);
         System.out.println(!false);
 
-        //Switch statement
-        char grade = 'h';
+        //Switch statement, lesson 60
+        char grade = 'B';
         switch (grade){
             case 'A': System.out.println("Excellent");
             break;
@@ -135,27 +138,41 @@ public class Main {
             default:
                 System.out.println("Foo");}
 
+        //New Switch Expression, lesson 62
+        String result =switch(grade){
+            case 'A'->"Excellent";
+            case 'B','C'-> "Pass";
+            default ->"Fail";
+        };
+        System.out.println(result);
+
+        //Packages, lesson 63
+        Point point= new Point();
+        Color color=new Color(0x9C8888);
+
+        //Import with fully qualified name, lesson 68
+        Date date=new Date();
+        java.sql.Date date1=new java.sql.Date(1); //From different package
+
+        //No Import for java lang package, its de default packages
+        String name="AmigosCode";
+        Math.cos(2.34);
+
+        //Access Modifiers Intro, lesson 70
+        //Access level
+        //classes, methods, attributes & constructors
+        //default, public, private & protected
+
+
+        System.out.println(foo);
+        //System.out.println(brand1);//error!!
+        Main m=new Main();
+        System.out.println(m.brand1);
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    static String foo="bar";
+    String brand1="amigosCode";
 
 
 

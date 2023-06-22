@@ -179,11 +179,104 @@ if(isAdult ==true){
 }
 
 ```
+
 >Switch satement (lesson 60)
 
+> New Switch Expression, lesson 62
+
+```
+        String result =switch(grade){
+            case 'A'->"Excellent";
+            case 'B','C'-> "Pass";
+            default ->"Fail";
+        };
+        System.out.println(result);
+```
+
+>Package
+**Rules for Naming packages**
+- prefix always written in all-lowercase , should be one of the top-level domain names: com, edu, gov, mil, net, edu, etx
+- subsequent components of the package name vary according to an organization's internal naming, but might specify certain directory name components.
+
+>Import with fully qualified name, lesson 68
+
+```
+        Date date=new Date(); 
+        java.sql.Date date1=new java.sql.Date(1); //From different package
+```
+
+>No Import for java lang package, its de default packages, lesson69
+
+```
+        String name="AmigosCode";
+        Math.cos(2.34);
+```
+
+>Access Modifiers Intro, lesson 70
+        //Access level
+        //classes, methods, attributes & constructors
+        //default, public, private & protected
+
+>Public Access Modifier 71
+
+```
+public class Main  {   //class!!
+    private static String foo="bar";   //attribute!!,  accesible: Ex:Main.foo , Main.main;
+    
+    public static void main(String[] args){   //method!!
+    
+         String foo="bar"; //local Variable!!!!
+    
+    }
+
+}
+
+```
+
+>Private Access Modifier, lesson72
+
+```
+public class Main  {   //class!!
+    private static String foo="bar";   //attribute!!, Not  accesible: Ex:Main.foo error!!, Main.main;
+    
+    public static void main(String[] args){   //method!!
+    
+         String foo="bar"; //local Variable!!!!
+    
+    }
+
+}
+
+```
+
+>Default or nothing, lesson 73, only accesible by same package
+
+>When To Use Each Access Modifier, lesson 75
+Public methods, free use 
+Private, internals methods
+
+>Static Keyword, lesson 76
+Static means that belongs to the class itself!!!
+Acces is, ClassName.nameOfMethod/Attribute
+
+```
+     Public class Main{
+     
+    static String foo="bar";
+    String brand1="amigosCode";
+    
+        public static void main(String[] args){
+                System.out.println(foo);
+                //System.out.println(brand1); //error, out of method
+                Main m=new Main(); //Instancia de classe Main!!!
+                System.out.println(m.brand); //Llamar la propiedad no static!!!
+           }
 
 
+    }
+    
 
+```
 
 
 >Methods (lesson 77)
@@ -200,6 +293,96 @@ if(isAdult ==true){
      */
     public static void main(String[] args)
     {
+    
     }
 ```
 
+```
+public class MainLesson77 {
+
+      private int add(int n1, int n2){
+              int result =n1+n2;
+              return result;
+          }
+          
+          public static void main(String[] args){
+              MainLesson77 main=new MainLesson77();//if add method isn't static
+              int result = main.add(10, 10);//if add method isn't static
+              System.out.println(result);
+      
+          }
+    }
+    
+```
+if the method add is static:
+```
+public class MainLesson77 {
+
+      private static int add(int n1, int n2){
+              int result =n1+n2;
+              return result;
+          }
+          
+         public static void main(String[] args){
+              //MainLesson77 main=new MainLesson77();//if add method isn't static
+              //int result = main.add(10, 10);//if add method isn't static
+              int result = add(10, 10);
+              System.out.println(result);
+
+           }
+    }
+```
+
+>Parameters and Arguments, lesson 79
+
+```
+private static add(int n1, int n2){
+}
+```
+**n1 and n2 Parameters, could be any type of object or variable type.**
+
+When we call the method, **10 and 20 are the arguments**:
+```
+int result=add(10,20);
+
+```
+
+>Void Method, lesson 80
+
+```
+private static void printBrand(){
+      s
+}
+```
+
+>Methods, naming convention, lesson 81
+
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized:
+run();
+runFast();
+getBackground();
+
+>Understanding public static void main, lesson 84
+
+Run in a terminal first :
+Compile de file with the main:
+```
+ casa@casa/ ~/amigosCode/code/Java_For_Beginners/src javac MainLesson84.java
+
+```
+
+Run  class file:
+
+```
+ casa@casa/ ~/amigosCode/code/Java_For_Beginners/src $ java com.amigoscode.MainLesson84
+0 arguments:
+
+```
+Now we can add arguments to the main:
+```
+  casa@casa/ ~/amigosCode/code/Java_For_Beginners/src $ java com.amigoscode.MainLesson84 hello ciao
+Arguments: 
+[hello, ciao]
+
+```
+Also we can pass arguments by intellij, on menut Run/Edit Configurations: select Application, and then "Program arguments"
