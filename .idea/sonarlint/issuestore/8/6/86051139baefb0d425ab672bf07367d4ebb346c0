@@ -1,4 +1,22 @@
 
-S	java:S106"9Replace this use of System.out or System.err by a logger.(€ıœ­ıÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(íüüÔ
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ãÂ¿¢8Ÿ¾«£1
+Q
+java:S1854";Remove this useless assignment to local variable "balance".(Ñ†¸ê
+R
+java:S1854"7Remove this useless assignment to local variable "age".(š–²øÿÿÿÿ
+S
+java:S1854"8Remove this useless assignment to local variable "name".(£’ô€úÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(€ıœ­ıÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(íüüÔ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ãÂ¿¢
+D
+java:S1481")Remove this unused "name" local variable.(£’ô€úÿÿÿÿ
+C
+java:S1481"(Remove this unused "age" local variable.(š–²øÿÿÿÿ
+G
+java:S1481",Remove this unused "isAdult" local variable.(‹¼€Ôûÿÿÿÿ
+B
+java:S1481",Remove this unused "balance" local variable.(Ñ†¸ê
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(·ùßóıÿÿÿÿ
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(¦Ã•
+D
+java:S1068")Remove this unused "brand" private field.(¹ÕÙõıÿÿÿÿ

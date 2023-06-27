@@ -386,3 +386,47 @@ Arguments:
 
 ```
 Also we can pass arguments by intellij, on menut Run/Edit Configurations: select Application, and then "Program arguments"
+
+>Type Inference with Var , lesson 86
+
+With **var** java takes care which type of variable is:
+```
+//Lesson 86, Type inference with var keyword
+        //only for local variables!!
+       var name="Jamila";
+       var names=new String[]{"Jamila","Alex"};
+       var age=12;
+       var isAdult=false;
+       var balance=1_000_000.33;
+
+```
+
+**Only local variable**and Java 10 or greater.
+**Don't at methods or as parametrer**
+
+>Break Keyword and Loops, lesson 87
+
+>Break continue, lesson 88
+
+**Continue jump to next iteration of for**
+**Break, break completely de for**
+
+>Return Keyword and Void Methods
+
+We use return to exit the method, if it haven't return parameter, is void:
+```
+//Lesson 88 and 89
+        for(String name1:names){
+            if(name1.startsWith("A")){
+                //continue;//move to next iteration of names
+
+                //break; //break completly de for iteration
+
+                //lesson 89
+                return;// if the method is void (public static void main(String[] args){)
+                        //return exit the method!!, in this case main
+
+            }
+            System.out.println(name1);
+        }
+```
