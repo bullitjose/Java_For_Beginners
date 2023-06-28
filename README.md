@@ -430,3 +430,48 @@ We use return to exit the method, if it haven't return parameter, is void:
             System.out.println(name1);
         }
 ```
+
+>Final Keyword, lesson 90
+
+Final for constants, bes approach:
+```
+//Final Keyword, lesson 90, good aproach to make a constant
+    public static final String NAME3="Alex"; //NAME3 Uppercase!!
+
+```
+
+>Enums, lesson 91 (other form to define constants)
+
+Also to define constants, at the same class of the main (outer of methods) or the better way create a new class at the same package and select enum class:
+```
+package com.amigoscode;
+
+public enum Month {
+        JANUARY,
+        FEBRUARY,
+        MARCH
+}
+```
+
+>Enums Methods, lesson 92
+
+Method values(), If we have a enum, we can get all the values:
+
+```
+        //enum methods, lesson 92
+        System.out.println(Month.values());//error print: [Lcom.amigoscode.Month;@36baf30c,
+        //print de direction of an anarray, so pass array to string
+        System.out.println(Arrays.toString(Gender.values()));//correct: [MALE, FEMALE]
+        //loop over all the values
+         for(Gender gender:Gender.values()){
+            System.out.println(gender);
+
+        }
+
+```
+
+
+
+
+
+
