@@ -470,8 +470,102 @@ Method values(), If we have a enum, we can get all the values:
 
 ```
 
+>Implicit and Explicit Type Casting, lesson 93
 
+```
+//Lesson93, Type casting-convert on data type to another
+        //Implicit type (widening) casting
+        int balance1=100;
+        double balanceInDouble=balance1;
+        System.out.println(balance1);//100
+        System.out.println(balanceInDouble);//100.0
+        
+          //Explicit Type(Narrowing) Casting
+        System.out.println("Explicit Type(Narrowing) Casting");
+        double remainingBalance=100.55;//100.55
+        System.out.println(remainingBalance);
+        int remainingBalanceInt=(int) remainingBalance;//100
+        System.out.println(remainingBalanceInt);
 
+```
 
+>Global and Local Variables, lesson 94
 
+```
+public class MainLesson84 {
+    //global variable, lesson 94
+    private static final String BRAND="AmigosCode";
+```
 
+**Local variables scope only access within the function**
+**If we have two variables we the same name, one Global other local, at the method the local is selected**
+
+**Constants are declared :**
+```
+public static final double PI=3.14;
+```
+
+>Wrapper Classes, lesson 95
+
+For each primitive type there is a wrapper class, byte-Byte, boolean-Boolean, char-Character, etc. Ther wrapper class let use the primitives as **objects**
+
+```
+//Lesson 95, wrapper classes
+        //Lesson 95, wrapper classes
+        //int age3 =20;
+        Integer age3=20; //Now is a class, with a lot of
+        // methods: byteValue(), compareTo(), etc
+        Double price=206.33;
+        var ageStr="55";
+        int a =Integer.parseInt(ageStr);//Pass to int, with Integer.parseInt method
+        System.out.println(a);
+        System.out.println(Integer.min(-1,5));
+        System.out.println(Double.min(1.2, -43_344_980.902));
+
+```
+
+>Working With Strings, lesson 96
+
+```
+//lesson 96, Strings
+        String name4="jamila";
+        System.out.println(name4.toUpperCase());//JAMILA    
+        System.out.println("  ".isBlank());//true
+        System.out.println("  ".isEmpty());//false, we have empty spaces
+        System.out.println(" hello  ".trim());//hello, without empty spaces
+        System.out.println(name4.startsWith("j"));//true
+        System.out.println(name4.substring(1));//amila
+        System.out.println(name4.substring(1, 4));//ami
+```
+
+>How Strings are stored in memory, lesson 97
+
+The String name1,  its at memory stack, its a Reference with the content "jamila" at the String Pool, a special memory region where Strings are stored by JVM at the HEAP.
+STACK o pila vs HEAP:
+|Paràmetre|STACK(pila)|HEAP
+|---|---|---|
+|Tipus d'estructures de dades|Una pila és una estructura de dades lineal.|Heap és una estructura de dades jeràrquica.|
+|Velocitat d'accés|	Accés d'alta velocitat|	Més lent en comparació amb la pila|
+|Gestió de l'espai|	L'espai gestionat de manera eficient pel sistema operatiu, de manera que la memòria mai es fragmentarà.|	L'espai heap no s'utilitza de manera tan eficient. La memòria es pot fragmentar a mesura que primer s'assignen blocs de memòria i després s'alliberen.|
+|Accés	|Només variables locals|	Permet accedir a variables globalment.|
+|Límit de mida de l'espai|	El límit de la mida de la pila depèn del sistema operatiu.|	No té un límit específic de mida de memòria.
+Canvia la mida	Les variables no es poden redimensionar	Les variables es poden redimensionar.|
+|Assignació de memòria|	La memòria s'assigna en un bloc contigu.|	La memòria s'assigna en qualsevol ordre aleatori.|
+|Assignació i desassignació|	Es fa automàticament mitjançant instruccions del compilador.|	Ho fa manualment el programador.|
+|Desassignació|	No requereix desassignar variables.|	Cal una desassignació explícita.|
+|Cost|	Menys|	Més|
+|Implementació|	Una pila es pot implementar de 3 maneres basades en matrius simples, utilitzant memòria dinàmica i basades en llista enllaçada.|	L'heap es pot implementar mitjançant matrius i arbres.|
+|Problema principal	|Falta de memòria|	Fragmentació de la memòria|
+|Localitat de referència|	Instruccions de temps de compilació automàtica.|	Adequat|
+|Flexibilitat|	Mida fixa|	El canvi de mida és possible|
+|Temps d'accés|	Més ràpid |	Més lent|
+
+We must optimize Strings. If we create a variable name2:
+```
+String name1="Jamila";
+String name2="Jamila";
+
+``` 
+JVM, at the Memory Stack create name1, name2, but how they store the same, **they reference the same, at "Jamila" at the String Pool!!**REUSES THE SAME OBJECT AT THE STRING POOL.
+
+>

@@ -4,7 +4,12 @@ import java.awt.*;
 import java.util.Arrays;
 
 public class MainLesson84 {
+    //global variable, lesson 94,
+    // private means only methods of this class can acces
+    private static final String BRAND="AmigosCode";
+
     //Final Keyword, lesson 90, good aproach to make a constant
+    //public menas all classes cant acces
     public static final String NAME3="Alex"; //NAME3 Uppercase!!
 
     //Enums, lesson 91
@@ -22,6 +27,48 @@ public class MainLesson84 {
 
     private String brand="amigosCode";//belong to instace of Class, dont use var
     public static void main(String[] args){
+
+        //lesson 97, how strings are stored in memory
+
+        //lesson 96, Strings
+        String name4="jamila";
+        System.out.println(name4+" Ahmed");
+        System.out.println(name4.toUpperCase());//JAMILA
+        System.out.println("  ".isBlank());//true
+        System.out.println("  ".isEmpty());//false, we have empty spaces
+        System.out.println(" hello  ".trim());//hello, without empty spaces
+        System.out.println(name4.startsWith("j"));//true
+        System.out.println(name4.substring(1));//amila
+        System.out.println(name4.substring(1, 4));//ami
+        System.out.println(name4.replace("j","S" )+"\n");//Samila
+
+
+        //Lesson 95, wrapper classes
+        //int age3 =20;
+        Integer age3=20; //Now is a class, with a lot of
+        // methods: byteValue(), compareTo(), etc
+        Double price=206.33;
+        var ageStr="55";
+        int a =Integer.parseInt(ageStr);//Pass to int, with Integer.parseInt method
+        System.out.println(a);
+        System.out.println(Integer.min(-1,5));
+        System.out.println(Double.min(1.2, -43_344_980.902));
+
+
+        //Lesson93, Type casting-convert on data type to another
+        //Implicit type (widening) casting
+        System.out.println("Implicit type (widening) casting");
+        int balance1=100;
+        double balanceInDouble=balance1;
+        System.out.println(balance1);//100
+        System.out.println(balanceInDouble);//100.0
+        //Explicit Type(Narrowing) Casting
+        System.out.println("Explicit Type(Narrowing) Casting");
+        double remainingBalance=100.55;//100.55
+        System.out.println(remainingBalance);
+        int remainingBalanceInt=(int) remainingBalance;//100
+        System.out.println(remainingBalanceInt);
+
         //enum, lesson 91
         System.out.println(TShirtSize.S);
         System.out.println(Gender.FEMALE);
