@@ -568,4 +568,51 @@ String name2="Jamila";
 ``` 
 JVM, at the Memory Stack create name1, name2, but how they store the same, **they reference the same, at "Jamila" at the String Pool!!**REUSES THE SAME OBJECT AT THE STRING POOL.
 
->
+>String Literal vs String Object, lesson 99.
+
+String Object: Now we can create a variable, name6, at the memory Stack, who's references or point to and object at the Heap, via new String("peep"):
+
+```
+//leson 99, String Literal vs String Object
+        //Pepe value store at the String Pool, and name5 at the heap
+        //name5 reference to the value Pepe at the String Pool
+        String name5="Pepe";
+        //Now value of name6 is at the Heap!!
+        String name6=new String("peep");
+```
+
+**Best way, use: String name5"Pepe";**. They are different, reference to String Pool (ALSO AT THE HEAP) or to an Object at the HEAP.
+
+>Comparing Strings with ==, lesson 100-101
+
+**If we use ==, we are comparing memory directions!!**
+
+```
+ //lesson100, Comparing Strings with ==
+        System.out.println(name5==name55);//true, at the String pool same reference
+        System.out.println(name5==name6);//false, comparing reference,not value
+        //name5 at the String pool, name6 is an object at the HEAP, BUT OUT the String pool
+
+```
+
+**For compare STRING value we use method ".equals"**
+```
+//For comparing the value in Strings
+        System.out.println(name5.equals(name55));//true
+        System.out.println(name5.equals(name6));//true
+```
+
+**Never use == to compare Strings**
+
+>Useful String static Methods, lesson 102
+
+```
+String[] names1={"Jamila","Alex","Aisha"};
+        String join=String.join(" |", names1);//Join elements of array with | delimeter
+        // in a String
+        System.out.println(join);
+```
+
+>LocalDateTime, lesson 103
+
+

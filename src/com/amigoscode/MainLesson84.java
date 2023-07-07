@@ -28,9 +28,40 @@ public class MainLesson84 {
     private String brand="amigosCode";//belong to instace of Class, dont use var
     public static void main(String[] args){
 
+        //lesson 99, String Literal vs String Object
+        //Pepe value store at the String Pool, and name5 at the heap
+        //name5 reference to the value Pepe at the String Pool
+        System.out.println("\n  lesson 99");
+        String name5="Pepe";
+        String name55="Pepe";
+        //Now value of name6 is at the Heap!!
+        String name6=new String("Pepe");
+
+        //lesson100, Comparing Strings with ==
+        System.out.println("\n  lesson 100");
+        System.out.println(name5==name55);//true, at the String pool same reference
+        System.out.println(name5==name6);//false, comparing reference,not value
+        //name5 at the String pool, name6 is an object at the HEAP, BUT OUT the String pool
+        //For comparing the value in Strings
+        System.out.println(name5.equals(name55));//true
+        System.out.println(name5.equals(name6));//true
+
+        //lesson 102, Useful String static Methods
+        System.out.println("\n  lesson 102");
+        String number9=String.valueOf(1);//int to String
+        System.out.println(number9);
+        String format=String.format("Number %s", number9);
+        System.out.println(format);
+        String[] names1={"Jamila","Alex","Aisha"};
+        String join=String.join(" |", names1);//Join elements of array with | delimeter
+        // in a String
+        System.out.println(join);
+
+
         //lesson 97, how strings are stored in memory
 
         //lesson 96, Strings
+        System.out.println("\n  lesson 96");
         String name4="jamila";
         System.out.println(name4+" Ahmed");
         System.out.println(name4.toUpperCase());//JAMILA
@@ -45,6 +76,7 @@ public class MainLesson84 {
 
         //Lesson 95, wrapper classes
         //int age3 =20;
+        System.out.println("\n  lesson 95");
         Integer age3=20; //Now is a class, with a lot of
         // methods: byteValue(), compareTo(), etc
         Double price=206.33;
@@ -57,6 +89,7 @@ public class MainLesson84 {
 
         //Lesson93, Type casting-convert on data type to another
         //Implicit type (widening) casting
+        System.out.println("\n  lesson 93");
         System.out.println("Implicit type (widening) casting");
         int balance1=100;
         double balanceInDouble=balance1;
@@ -70,6 +103,7 @@ public class MainLesson84 {
         System.out.println(remainingBalanceInt);
 
         //enum, lesson 91
+        System.out.println("\n  lesson 91");
         System.out.println(TShirtSize.S);
         System.out.println(Gender.FEMALE);
 
@@ -78,6 +112,7 @@ public class MainLesson84 {
         System.out.println(Month.FEBRUARY);
 
         //enum methods, lesson 92
+        System.out.println("\n  lesson 92");
         System.out.println(Month.values());//error print: [Lcom.amigoscode.Month;@36baf30c,
         //print de direction of an anarray, so pass array to string
         System.out.println(Arrays.toString(Gender.values()));//correct: [MALE, FEMALE]
